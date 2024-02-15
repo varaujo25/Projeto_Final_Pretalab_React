@@ -1,9 +1,14 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App.jsx';
+import Menu from './Componentes/Menu';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <div>
+      <Menu /> {/* Renderizando o componente Menu */}
+      <App />
+    </div>
   </React.StrictMode>,
-)
+  document.getElementById('root')
+);
