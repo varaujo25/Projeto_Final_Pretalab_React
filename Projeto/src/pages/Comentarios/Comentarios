@@ -1,14 +1,13 @@
-import { useState } from 'react';
-import styles from './Comentarios.module.css';
-import Comentario from '../../assets/Comentario.png';
-
 const Comentarios = () => {
+  // Estado para armazenar o novo comentário
   const [novoComentario, setNovoComentario] = useState('');
 
+  // Função para atualizar o estado ao digitar um novo comentário
   const aoDigitarComentario = (event) => {
     setNovoComentario(event.target.value);
   };
 
+  // Função para limpar o campo de comentário ao clicar no botão
   const aoClicarBotao = () => {
     setNovoComentario('');
   };
@@ -16,9 +15,7 @@ const Comentarios = () => {
   return (
     <>
       <div className={styles.header}>
-        <h1>
-            Deixe o seu comentário
-        </h1>
+        <h1>Deixe o seu comentário</h1>
         <img src={Comentario} alt="Comentário" />
       </div>
       <div className={styles.commentBox}>

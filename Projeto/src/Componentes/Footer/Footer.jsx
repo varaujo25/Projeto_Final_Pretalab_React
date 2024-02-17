@@ -1,13 +1,13 @@
-import styles from './footer.module.css'
+import styles from './footer.module.css';
 
 function Footer() {
-  return(
+  return (
     <footer className={styles.footer}>
       <p>
         Criado por Vanessa de Araujo 🤎
       </p>
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;
