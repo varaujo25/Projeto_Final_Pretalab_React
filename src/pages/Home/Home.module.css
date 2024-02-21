@@ -1,9 +1,7 @@
 .header {
   text-align: center;
   color: var(--text-color);
-  background: var(--primary-color);
-  width: 100%;
-  margin-bottom: 2rem;
+  background: var(--primary-color); 
 }
 
 .header h1 {
@@ -13,74 +11,105 @@
 
 .header img {
   margin: 2rem;
-  width: 40vw;
-  height: 60vh;
+  width: 20%;
+  height: 20%;
 }
 
-.list {
-  background-color: var(--text-color);
-  border-radius: 1rem;
-  padding: 70px 60px;
-  margin: 0 auto;
-}
-
-.inputContainer {
-  width: 100%;
+.subtitulo {
+  padding: 1rem;
+  font-size: 1.5rem;
+  height: 400px;
+  color: var(--primary-color);
+  text-align: center;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  background: var( --background-section);
 }
 
-.input {
-  background: var(--text-color);
-  border: 0.5px solid var(--primary-color); /* Corrigindo a propriedade border */
-  padding: 12px 24px;
-  border-radius: 8px;
-  height: 100px;
-  width: 70%;
-}
-
-.addContainer {
-  display: flex;
-  justify-content: flex-start;
-}
-
-.addTask {
-  background: var(--primary-color);
-  width: 300px;
-  border-radius: 8px;
-  border: 0;
-  color: var(--text-color);
-  padding: 14px;
-}
-
-.removeTask {
-  background: rgb(230, 79, 79);
-  margin: 2rem;
-  border-radius: 8px;
-  border: 0;
-  padding: 14px;
-  color: var(--text-color);
-}
-
-.listItems {
-  list-style: none;
-  width: 100%;
-  padding: 2rem;
-}
-
-.listItems > li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
-  border-bottom: 0.7px solid #7e7d7d;
+.subtitulo p {
   width: 60%;
 }
 
-.listItems li div p {
-  font-size: 1.3em;
-  color: #111;
+.beneficios {
+  width: 100%;
+}
+
+.content {
+  width: 100%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.cardsContainer {
+  width: 70%;
+}
+
+.tituloCards {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.card {
+  margin: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.imagemCard {
+  width: 15rem;
+}
+
+.textos {
+  margin: 2rem;
+}
+
+.subtituloCard {
+  font-size: 3rem;
+  color: var(--primary-color);
+  font-weight: ExtraLight 200;
+}
+
+.texto {
+  width: 12rem;
+}
+
+@media(max-width: 765px) {
+  .content {
+    flex-direction: column;
+  }
+  
+  .subtitulo {
+    height: 400px;
+  }
+  
+  .cards {
+    flex-direction: column;
+  }
+
+  .card {
+    flex-direction: column;
+  }
+
+  .subtituloCard {
+    text-align: center;
+  }
+
+  .header img {
+    margin: 2rem;
+    width: 60%;
+    height: 60%;
+  }
 }

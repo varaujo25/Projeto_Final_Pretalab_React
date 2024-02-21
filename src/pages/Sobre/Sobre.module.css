@@ -4,28 +4,31 @@
   background: var(--primary-color);
 }
 
-.headerImg {
-  width: 300px;
-  margin-top: 70px;
+.header h1 {
+  padding-top: 2rem;
+  font-size: 2rem;
 }
 
-.containerPrincipalSobre {
-  background-color: var(--primary-color);
+.header img {
+  margin: 2rem;
+  width: 115px;
+  height: 100%;
 }
 
 .containerSobre {
   background-color: var(--primary-color);
-  flex-direction: column;
-  text-align: center;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  padding: 15px; 
 }
 
 .nomeCompleto {
   font-size: 36px;
-  color: var(--text-rodape);
+  color: #c08b89;
   font-weight: 700;
+  height: 45px;
 }
 
 .profissao {
@@ -33,47 +36,95 @@
   color: var(--text-sobre);
   font-weight: 600;
   height: 40px;
-  margin-top: 20px;
-  margin-bottom: 20px;
 }
 
-.sobreMim {
+.sobreMim{
   font-size: 20px;
-  color: var(--text-rodape);
-  height: auto;
+  color: #c08b89;
+  height: 45px;
+}
+
+.subtitulo {
+  padding: 1rem;
+  font-size: 1.5rem;
+  height: 700px;
+  color: var(--primary-color);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var( --background-section);
+}
+
+.subtitulo p {
+  width: 40%;
+}
+
+.subtitulo img {
+  margin: 2rem;
+  width: 50vw;
+  height: 60vh;
 }
 
 .containerSobre iframe {
   width: 560px;
-  height: 315px;
+  height: 315px; 
 }
 
-.containerSobre {
+.tituloSobre {
+  width: 40%;
+  font-size: 2rem;
+  font-weight: ExtraLight 200;
+  color: var(--text-sobre);
+}
+
+.containerSobre{
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 2rem;
 }
 
-.containerAprendizado {
-  flex-direction: column;
-  text-align: center;
+.containerVideo{
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  background: var(--primary-color);
+  padding: 4rem;
 }
 
-.aprendizado {
-  font-size: 25px;
-  color: var(--text-sobre);
-  font-weight: 600;
-  height: 40px;
-  margin-top: 50px;
-  margin-bottom: 20px;
+.textVideo {
+  margin-right: 3rem;
 }
 
-.aprendizadoImg {
-  width: 70%;
-  margin-top: 50px;
-  margin-bottom: 50px;
+@media(max-width: 765px) {
+  .subtitulo {
+    flex-direction: column; 
+  }
+
+  .header h1 {
+   padding: 2rem;
+    font-size: 2rem;
+  }
+
+  .subtitulo img {
+    margin: 2rem;
+    width: 80vw;
+    height: 25vh;
+  }
+
+  .subtitulo p {
+    width: 80%;
+  }
+
+  .tituloSobre {
+    width: 80%;
+    font-size: 1.5rem;
+    padding-bottom: 2rem;
+    font-weight: ExtraLight 200;
+  }
+
+  .containerSobre {
+    flex-direction: column;
+  }
 }
