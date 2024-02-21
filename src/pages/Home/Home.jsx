@@ -36,4 +36,5 @@ const Home = () => {
                 <img className={styles.imagemCard} src={TWO_BLACK_POWER} alt="Apoio" />
                 <div className={styles.textos}>
                   <h3 className={styles.subtituloCard}>Apoio</h3>
-                  <p className={styles.texto}>Buscando no
+                  <p className={styles.texto}>Buscando no</p>
+
