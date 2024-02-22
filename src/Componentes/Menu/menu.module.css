@@ -38,16 +38,131 @@
     flex-direction: column;
   }
 
-  .item .link {
+  .menu {
+    display: none; /* Oculta o menu quando a largura da tela é menor que 765px */
+  }.hamburguer {
     display: none;
   }
-
-  .hamburguerOpen {
-    display: flex;
-    align-items: start;
-    justify-content: start;
-    flex-direction: column;
+  
+  .menu {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 80%;
+    margin: 0 auto;
+    background: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .item {
+    float: left;
+  }
+  
+  .hamburguer {
+    display: none;
+  }
+  
+  .menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 80%;
+    margin: 0 auto;
+    background: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .item {
+    float: left;
+  }
+  
+  .item .link {
+    font-size: 1.3em;
+    font-weight: 600;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: var(--primary-color);
+  }
+  
+  @media(max-width: 765px) {
+    .hamburguer {
+      margin: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+  
+    .menu {
+      display: none; /* Oculta o menu quando a largura da tela é menor que 765px */
+    }
+  
+    .hamburguerOpen .menu {
+      display: flex; 
+      flex-direction: column;
+    }
+  
+    .itemOpen .linkOpen {
+      font-size: 1.3em;
+      font-weight: 600;
+      display: block;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      color: var(--primary-color);
+    }
+  }
+  .item .link {
+    font-size: 1.3em;
+    font-weight: 600;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: var(--primary-color);
+  }
+  
+  @media(max-width: 765px) {
+    .hamburguer {
+      margin: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+  
+    .menu {
+      display: none; /* Oculta o menu quando a largura da tela é menor que 765px */
+    }
+  
+    .hamburguerOpen .menu {
+      display: flex; 
+      flex-direction: column;
+    }
+  
+    .itemOpen .linkOpen {
+      font-size: 1.3em;
+      font-weight: 600;
+      display: block;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      color: var(--primary-color);
+    }
+  }
+  
+
+  .hamburguerOpen .menu {
+    display: flex; 
+    flex-direction: column;
   }
 
   .itemOpen .linkOpen {
