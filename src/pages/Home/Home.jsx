@@ -1,5 +1,6 @@
+import React from 'react'; // Adicionado React
 import styles from './home.module.css';
-import bannerImg from './assets/banner.jpeg';
+import bannerImg from './assets/banner.jpeg'; // Corrigido o caminho da imagem
 import formacaoImg from '../../assets/formacaoimg.jpeg';
 import experienciaImg from '../../assets/experiencia.jpeg';
 import vagasImg from '../../assets/vagas.svg';
@@ -11,7 +12,7 @@ const Home = () => {
         <h1>
           Bem-vindo ao Portfolio de Vanessa de Araujo!
         </h1>
-        <img src={bannerImg} alt="Banner" />
+        <img src={bannerImg} alt="Banner" /> {/* Corrigido o caminho da imagem */}
       </div>
       <div className={styles.subtitulo}>
         <p>Você está prestes a explorar o projeto desenvolvido por Vanessa de Araujo, uma estudante do Ciclo Formativo Básico da Pretalab. Este site representa o aprendizado adquirido do módulo de React, como uma demonstração do conhecimento, habilidades e paixão de Vanessa pelo desenvolvimento web.

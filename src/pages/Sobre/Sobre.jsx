@@ -1,5 +1,5 @@
-import from formacao '../../assets/formacao.jpeg'
-import styles from './sobre.module.css'
+import formacao from '../../assets/formacao.jpeg'; // Corrigido o nome da variável 'formacao'
+import styles from './sobre.module.css';
 
 const Sobre = () => {
   return (
@@ -9,11 +9,11 @@ const Sobre = () => {
           Ciclo Formativo Pretalab
         </h1>
         <div>
-            <img src={agenda} alt="agenda" />
+            <img src={formacao} alt="formacao" /> {/* Corrigido o nome da variável 'agenda' para 'formacao' e o alt */}
         </div>
       </div>
 
-      <div className={styles.containerSobre} >
+      <div className={styles.containerSobre}>
           <h1 className={styles.nomeCompleto}>Vanessa de Araujo</h1>
           <h2 className={styles.profissao}>Desafios</h2>
           <p className={styles.sobreMim}>
@@ -22,22 +22,20 @@ const Sobre = () => {
       </div>
 
       <div className={styles.subtitulo}>
-        <img src={cicloImg} />
+        <img src={cicloImg} alt="cicloImg" /> {/* Adicionei o alt 'cicloImg' */}
         <p>
         Conteúdo aplicado durante o processo de aprendizagem.
         </p>
       </div>
 
       <div className={styles.containerVideo}>
-        <iframe width="560" height="315" src="https://www.youtube.com/watch?v=YKJ7kgkIMwM
-
-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
+        <iframe width="560" height="315" src="https://www.youtube.com/watch?v=YKJ7kgkIMwM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
         <div className={styles.tituloSobre}>
         Explore os conteúdos da Pretalab, onde cada módulo é uma jornada de descoberta, aprendizado e crescimento no universo do desenvolvimento, capacitando mulheres negras programadoras a alcançarem novos patamares
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
 export default Sobre;

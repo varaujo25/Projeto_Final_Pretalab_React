@@ -12,7 +12,7 @@
 .header img {
   margin: 2rem;
   width: 115px;
-  height: 100%;
+  height: auto; /* Ajustado para manter a proporção */
 }
 
 .containerSobre {
@@ -21,27 +21,27 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 15px; 
+  padding: 15px;
 }
 
 .nomeCompleto {
   font-size: 36px;
   color: #c08b89;
   font-weight: 700;
-  height: 45px;
+  height: auto; /* Ajustado para manter a proporção */
 }
 
 .profissao {
   font-size: 25px;
   color: var(--text-sobre);
   font-weight: 600;
-  height: 40px;
+  height: auto; /* Ajustado para manter a proporção */
 }
 
-.sobreMim{
+.sobreMim {
   font-size: 20px;
   color: #c08b89;
-  height: 45px;
+  height: auto; /* Ajustado para manter a proporção */
 }
 
 .subtitulo {
@@ -53,7 +53,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var( --background-section);
+  background: var(--background-section);
 }
 
 .subtitulo p {
@@ -62,55 +62,56 @@
 
 .subtitulo img {
   margin: 2rem;
-  width: 50vw;
-  height: 60vh;
+  max-width: 100%; /* Ajustado para manter a proporção */
+  height: auto; /* Ajustado para manter a proporção */
 }
 
 .containerSobre iframe {
-  width: 560px;
-  height: 315px; 
+  width: 100%; /* Ajustado para ocupar toda a largura do contêiner */
+  height: 315px;
 }
 
 .tituloSobre {
   width: 40%;
   font-size: 2rem;
-  font-weight: ExtraLight 200;
+  font-weight: 200; /* Ajustado o estilo da fonte */
   color: var(--text-sobre);
 }
 
-.containerSobre{
+.containerSobre {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 2rem;
 }
 
-.containerVideo{
+.containerVideo {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column; /* Ajustado para empilhar os elementos em dispositivos móveis */
   align-items: center;
   background: var(--primary-color);
   padding: 4rem;
 }
 
 .textVideo {
-  margin-right: 3rem;
+  margin-bottom: 3rem; /* Ajustado para espaçamento entre os elementos */
 }
 
-@media(max-width: 765px) {
+@media (max-width: 765px) {
   .subtitulo {
-    flex-direction: column; 
+    flex-direction: column;
+    height: auto; /* Removido a altura fixa */
   }
 
   .header h1 {
-   padding: 2rem;
+    padding: 2rem;
     font-size: 2rem;
   }
 
   .subtitulo img {
     margin: 2rem;
     width: 80vw;
-    height: 25vh;
+    height: auto; /* Ajustado para manter a proporção */
   }
 
   .subtitulo p {
@@ -121,7 +122,7 @@
     width: 80%;
     font-size: 1.5rem;
     padding-bottom: 2rem;
-    font-weight: ExtraLight 200;
+    font-weight: 200; /* Ajustado o estilo da fonte */
   }
 
   .containerSobre {

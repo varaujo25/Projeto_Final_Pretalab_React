@@ -24,7 +24,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var( --background-section);
+  background: var(--background-section); /* Corrigido o nome da variável */
 }
 
 .subtitulo p {
@@ -79,7 +79,7 @@
 .subtituloCard {
   font-size: 3rem;
   color: var(--primary-color);
-  font-weight: ExtraLight 200;
+  font-weight: 200; /* Corrigido o nome da fonte leve */
 }
 
 .texto {
@@ -92,7 +92,7 @@
   }
   
   .subtitulo {
-    height: 400px;
+    height: auto; /* Alterado para altura automática */
   }
   
   .cards {

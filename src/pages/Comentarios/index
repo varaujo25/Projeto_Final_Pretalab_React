@@ -1,51 +1,50 @@
-import { useState, useEffect } from 'react'
-import { FiTrash2, FiPlus } from 'react-icons/fi'
-import { nanoid } from 'nanoid'
+import React, { useState, useEffect } from 'react'; // Adicionado React e useEffect
+import { FiTrash2, FiPlus } from 'react-icons/fi';
+import { nanoid } from 'nanoid';
 
-import homeImg from '../../assets/work.jpeg'
+import homeImg from '../../assets/work.jpeg';
 
-import styles from './Comentarios.module.css'
+import styles from './Comentarios.module.css';
 
 const Comentarios = () => {
   const getLocalList = () => {
-    let items = localStorage.getItem('list')
-  
+    let items = localStorage.getItem('list');
+
     if (items) {
-      return JSON.parse(localStorage.getItem('list'))
+      return JSON.parse(localStorage.getItem('list'));
     } else {
-      return []
+      return [];
     }
-  }
+  };
   
-  const [list, setList] = useState(getLocalList)
-  const [newTask, setNewTask] = useState('')
+  const [list, setList] = useState(getLocalList());
+  const [newTask, setNewTask] = useState('');
 
   function handleCreateNewTask() {
-    // Crie uma nova task com um id random, não permita criar caso o título seja vazio.
     const task = {
       id: nanoid(),
       title: newTask,
       isComplete: false
+    };
+
+    if (task.title === '') {
+      return;
     }
 
-    if(task.title === '') {
-      return
-    }
-
-    setList([...list, task])
-    setNewTask('')
+    setList([...list, task]);
+    setNewTask('');
   }
 
   function handleRemoveTask(id) {
     // Remova uma task da listagem pelo ID
-    const tasksFiltered = list.filter(task => task.id !== id)
-    setList(tasksFiltered)
+    const tasksFiltered = list.filter(task => task.id !== id);
+    setList(tasksFiltered);
   }
 
-  //salvar na localStorage
+  // Salvar na localStorage
   useEffect(() => {
-    localStorage.setItem('list', JSON.stringify(list))
-  }, [list])
+    localStorage.setItem('list', JSON.stringify(list));
+  }, [list]);
 
   return (
     <>
@@ -53,7 +52,7 @@ const Comentarios = () => {
         <h1>
           Deixe um comentário
         </h1>
-        <img src={homeImg} />
+        <img src={homeImg} alt="Imagem Home" /> {/* Adicionado atributo alt */}
       </div>
      
       <div className={styles.inputContainer}>
@@ -65,7 +64,7 @@ const Comentarios = () => {
           value={newTask}
         />
         <div className={styles.addContainer}>
-          <button className={styles.addTask} type="submit" onClick={handleCreateNewTask}>
+          <button className={styles.addTask} type="button" onClick={handleCreateNewTask}> {/* Alterado type para button */}
             <FiPlus size={16} color="#fff"/>
           </button>
         </div>
@@ -83,13 +82,13 @@ const Comentarios = () => {
                   <FiTrash2 size={16}/>
                 </button>
               </li>
-            )
+            );
           })}
         </ul>
       </main>
     </>
     
-  )
-}
+  );
+};
 
 export default Comentarios;
